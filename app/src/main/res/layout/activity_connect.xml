@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="720px"
+    android:layout_height="1430px"
+    tools:context=".ConnectActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="720px"
+        android:layout_height="100px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#25457A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="top"
+        android:text="HabitHub"
+        android:textColor="#FFFFFF"
+        android:textSize="50px"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="top"
+        android:onClick="goToMenu"
+        android:text="МЕНЮ"
+        android:textColor="#FFFFFF"
+        android:textSize="58px"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:layout_width="668px"
+        android:layout_height="225px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20px"
+        android:gravity="top"
+        android:text="Почему нам нужно писать: \n
+    &#8226; у вас произошла ошибка \n
+    &#8226; вы нашли баг \n
+    &#8226; вы хотите что-либо добавить в нашу программу"
+        android:textColor="#000000"
+        android:textSize="36px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="668px"
+        android:layout_height="225px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20px"
+        android:gravity="top"
+        android:text="Почему нам нужно писать: \n
+    &#8226; у вас произошла ошибка \n
+    &#8226; вы нашли баг \n
+    &#8226; вы хотите что-либо добавить в нашу программу"
+        android:textColor="#000000"
+        android:textSize="36px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="668px"
+        android:layout_height="660px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="265px"
+        android:gravity="top"
+        android:text="О проекте habit-hub: \n
+    Мы провели исследование и \n
+поняли: люди, когда формируют \n
+привычки, могут забыть о них или \n
+остановиться на полпути \n
+формирования привычки. \n
+    Из этого исследования мы поняли, \n
+что людям не хватает мотивации для \n
+формирования привычек.\n
+    Мы решили эту проблему, \n
+создав мобильное приложение. \n
+    Наши основные задачи: \n
+1) Понятный дизайн приложения. \n
+2) Многофункциональное мобильное приложение. \n
+3) Опубликовать приложение."
+        android:textColor="#000000"
+        android:textSize="34px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="615px"
+        android:layout_height="88px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1237px"
+        android:gravity="center_horizontal|top"
+        android:text="Можно связаться с нами по почте habit-hub@gmail.com"
+        android:textColor="#373737"
+        android:textSize="36px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
