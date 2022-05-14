@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="720px"
-    android:layout_height="1430px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".ConnectActivity">
 
     <View
-        android:id="@+id/view"
-        android:layout_width="720px"
-        android:layout_height="100px"
+        android:id="@+id/TopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#25457A"
@@ -21,41 +21,40 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/NameOfApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="12.8dp"
         android:gravity="top"
-        android:text="HabitHub"
+        android:text="Habitude"
         android:textColor="#FFFFFF"
-        android:textSize="50px"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TopBar"
+        app:layout_constraintEnd_toEndOf="@+id/TopBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TopBar"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.58000004" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="5.12dp"
         android:gravity="top"
         android:onClick="goToMenu"
         android:text="МЕНЮ"
         android:textColor="#FFFFFF"
-        android:textSize="58px"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.982"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textSize="37.2sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TopBar"
+        app:layout_constraintEnd_toEndOf="@+id/TopBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/TopBar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="668px"
@@ -73,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/TopBar"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -92,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/TopBar"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -122,7 +121,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/TopBar"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -138,7 +137,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/TopBar"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

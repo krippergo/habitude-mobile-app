@@ -5,11 +5,27 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
+import android.widget.Toast
 
 class CreateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create)
+
+
+        val editTextNameHabit = findViewById<EditText>(R.id.NameHabit)
+        val create = findViewById<View>(R.id.view4)
+
+
+
+
+        create.setOnClickListener{
+            Toast.makeText(this,"Ваш текст ${editTextNameHabit.text}",Toast.LENGTH_SHORT).show()
+
+        }
+
+
     }
 
     fun goToConnect(view: View){
