@@ -40,17 +40,17 @@
       app:layout_constraintVertical_bias="0.58000004" />
 
   <TextView
-      android:id="@+id/Contact"
+      android:id="@+id/Shop"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentLeft="true"
       android:layout_alignParentTop="true"
       android:layout_marginEnd="5.12dp"
       android:gravity="top"
-      android:onClick="goToConnect"
-      android:text="КОНТАКТ"
+      android:onClick="goToMenu"
+      android:text="НАЗАД"
       android:textColor="#FFFFFF"
-      android:textSize="37.2sp"
+      android:textSize="35sp"
       app:layout_constraintBottom_toBottomOf="@+id/TopBar"
       app:layout_constraintEnd_toEndOf="@+id/TopBar"
       app:layout_constraintHorizontal_bias="1.0"
@@ -74,38 +74,5 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/TopBar"
       app:layout_constraintVertical_bias="0.0" />
-
-  <View
-      android:id="@+id/ButtonShop"
-      android:layout_width="78.5dp"
-      android:layout_height="29dp"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentTop="true"
-      android:layout_marginTop="6dp"
-      android:layout_marginEnd="5dp"
-      android:background="#227E87"
-      android:onClick="goToMenu"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/TopBar"
-      app:layout_constraintVertical_bias="0.0" />
-
-  <TextView
-      android:id="@+id/Shop"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentLeft="true"
-      android:layout_alignParentTop="true"
-      android:text="назад"
-      android:textColor="#FFFFFF"
-      android:textSize="19sp"
-      app:layout_constraintBottom_toBottomOf="@+id/ButtonShop"
-      app:layout_constraintEnd_toEndOf="@+id/ButtonShop"
-      app:layout_constraintStart_toStartOf="@+id/ButtonShop"
-      app:layout_constraintTop_toTopOf="@+id/ButtonShop"
-      app:layout_constraintVertical_bias="0.35000002" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
