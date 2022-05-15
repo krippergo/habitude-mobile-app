@@ -19,6 +19,11 @@ class ConnectActivity : AppCompatActivity() {
         initListener()
     }
 
+    override fun onBackPressed() {
+        startActivity(Intent(this@ConnectActivity, ConnectActivity::class.java))
+        overridePendingTransition(0, 0)
+    }
+
     private fun initView() {
         textGoToMenu = findViewById(R.id.TextGoToMenu)
     }

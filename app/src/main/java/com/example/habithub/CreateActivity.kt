@@ -24,6 +24,11 @@ class CreateActivity : AppCompatActivity() {
         initListener()
     }
 
+    override fun onBackPressed() {
+        startActivity(Intent(this@CreateActivity, ConnectActivity::class.java))
+        overridePendingTransition(0, 0)
+    }
+
     private fun initView() {
         textContact = findViewById(R.id.NameOfApp)
         goToMenu = findViewById(R.id.ButtonBack)

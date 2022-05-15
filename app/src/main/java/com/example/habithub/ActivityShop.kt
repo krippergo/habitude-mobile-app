@@ -18,6 +18,11 @@ class ActivityShop : AppCompatActivity() {
         initListener()
     }
 
+    override fun onBackPressed() {
+        startActivity(Intent(this@ActivityShop, ConnectActivity::class.java))
+        overridePendingTransition(0, 0)
+    }
+
     private fun initView() {
         textContact = findViewById(R.id.NameOfApp)
         textBack = findViewById(R.id.Back)
