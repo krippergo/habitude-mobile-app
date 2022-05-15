@@ -18,11 +18,15 @@ Habitude
 ```
 --------
 ### Ссылки относительно проекта
+```
 Ссылка на репозиторий GitHub - https://github.com/krippergo/habitude-mobile
 Проект на Figma - https://www.figma.com/file/hC0uMpjr63vln9wgBKkkxB/HabitHub-Mobile?node-id=0%3A1
+```
 --------
 ### Ресурсы
+```
 GitHub - https://github.com
 Figma - https://www.figma.com
 Trello - https://trello.com
 Цветовая палитра - https://color.adobe.com/ru/create/color-wheel
+```
