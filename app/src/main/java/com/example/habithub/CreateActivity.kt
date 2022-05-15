@@ -4,40 +4,50 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 
 class CreateActivity : AppCompatActivity() {
+
+    lateinit var textContact: TextView
+    lateinit var goOfUrl: TextView
+    lateinit var goToMenu: Button
+    lateinit var buttonCreate: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create)
 
+        initView()
+        initListener()
+    }
 
-        val editTextNameHabit = findViewById<EditText>(R.id.NameHabit)
-        val create = findViewById<View>(R.id.view4)
+    private fun initView() {
+        textContact = findViewById(R.id.NameOfApp)
+        goToMenu = findViewById(R.id.ButtonBack)
+        buttonCreate = findViewById(R.id.ButtonCreate)
+        goOfUrl = findViewById(R.id.url)
+    }
 
-
-
-
-        create.setOnClickListener{
-            Toast.makeText(this,"Ваш текст ${editTextNameHabit.text}",Toast.LENGTH_SHORT).show()
-
+    private fun initListener() {
+        textContact.setOnClickListener {
+            startActivity(Intent(this@CreateActivity, ConnectActivity::class.java))
+            overridePendingTransition(0, 0)
         }
-
-
-    }
-
-    fun goToConnect(view: View){
-        startActivity(Intent(this@CreateActivity, ConnectActivity::class.java))
-    }
-
-    fun backMenu(view: View){
-        startActivity(Intent(this@CreateActivity, MainActivity::class.java))
-    }
-
-    fun url(view: View){
-        val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.wikium.ru/formirovanie-privychek.html"))
-        startActivity(i)
+        goToMenu.setOnClickListener {
+            startActivity(Intent(this@CreateActivity, MainActivity::class.java))
+            overridePendingTransition(0, 0)
+        }
+        buttonCreate.setOnClickListener {
+            val editTextNameHabit = findViewById<EditText>(R.id.NameOfHabitInput)
+            val textNameHabit = editTextNameHabit.text
+            Toast.makeText(this,"Ваш текст $textNameHabit.", Toast.LENGTH_SHORT).show()
+        }
+        goOfUrl.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://blog.wikium.ru/formirovanie-privychek.html"))
+            startActivity(i)
+        }
     }
 }

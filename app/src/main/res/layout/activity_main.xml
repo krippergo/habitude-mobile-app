@@ -75,12 +75,12 @@
 
     <TextView
         android:id="@+id/TextAboutHabit"
-        android:layout_width="277.5dp"
+        android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|center_vertical"
-        android:text="здесь будет твоя формирующаяся привычка"
+        android:text="здесь будет твоя \n формирующаяся привычка"
         android:textColor="#000000"
         android:textSize="24.3sp"
         app:layout_constraintBottom_toTopOf="@+id/ButtonStart"
