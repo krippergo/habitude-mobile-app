@@ -20,7 +20,7 @@ class ConnectActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this@ConnectActivity, ConnectActivity::class.java))
+        startActivity(Intent(this@ConnectActivity, MainActivity::class.java))
         overridePendingTransition(0, 0)
     }
 

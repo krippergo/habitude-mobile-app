@@ -19,7 +19,7 @@ class ActivityShop : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this@ActivityShop, ConnectActivity::class.java))
+        startActivity(Intent(this@ActivityShop, MainActivity::class.java))
         overridePendingTransition(0, 0)
     }
 
