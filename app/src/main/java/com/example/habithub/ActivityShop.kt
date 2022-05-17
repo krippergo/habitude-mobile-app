@@ -19,6 +19,15 @@ class ActivityShop : AppCompatActivity() {
         setContentView(R.layout.activity_shop)
 
         prefs = getSharedPreferences("habit", Context.MODE_PRIVATE)
+        if(prefs.contains("money")){
+            val money = prefs.getInt("money", 200)
+            findViewById<TextView>(R.id.Money).setText("у тебя $money хаб-коинов")
+        } else {
+            val editor = prefs.edit()
+            editor.putInt("money", 200).apply()
+            val money = prefs.getInt("money", 200)
+            findViewById<TextView>(R.id.Money).setText("у тебя $money хаб-коинов")
+        }
 
         initView()
         initListener()

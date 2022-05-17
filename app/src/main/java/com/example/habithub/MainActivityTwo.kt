@@ -13,10 +13,6 @@ class MainActivityTwo : AppCompatActivity() {
     lateinit var textContact: TextView
     lateinit var textShop: TextView
 
-    //lateinit var editTextNameHabit: TextView
-    //lateinit var answerOneInput: EditText
-    //lateinit var answerTwoInput: EditText
-
     private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,12 +20,22 @@ class MainActivityTwo : AppCompatActivity() {
         setContentView(R.layout.activity_main_two)
 
         prefs = getSharedPreferences("habit", Context.MODE_PRIVATE)
+        if(prefs.contains("money")){
+            val money = prefs.getInt("money", 200)
+            findViewById<TextView>(R.id.Money).setText("у тебя $money хаб-коинов")
+        } else {
+            val editor = prefs.edit()
+            editor.putInt("money", 200).apply()
+            val money = prefs.getInt("money", 200)
+            findViewById<TextView>(R.id.Money).setText("у тебя $money хаб-коинов")
+        }
+
         if(prefs.contains("editTextNameHabit") && prefs.contains("answerOne") && prefs.contains("answerTwo") && prefs.contains("days")){
             val nameHabit = prefs.getString("editTextNameHabit", "Название")
             findViewById<TextView>(R.id.nameOfHabit).setText(nameHabit)
 
             val daysOfHabit = prefs.getInt("days", 21)
-            var dayString = "день"
+            var dayString:String
             if(daysOfHabit == 1 || daysOfHabit == 21) {
                 dayString = "день"
             } else if(daysOfHabit == 2 || daysOfHabit == 3 || daysOfHabit == 4) {
@@ -37,7 +43,16 @@ class MainActivityTwo : AppCompatActivity() {
             } else {
                 dayString = "дней"
             }
-            findViewById<TextView>(R.id.daysOfComplete).setText("Дней выполнения: $daysOfHabit $dayString")
+
+            findViewById<TextView>(R.id.daysOfComplete).setText("Дней выполнения: ${21 - daysOfHabit} $dayString")
+
+            findViewById<TextView>(R.id.daysOfNeedComplete).setText("До конца: $daysOfHabit $dayString")
+
+            val answerOneSelect = prefs.getString("answerOne", "Ответ на вопрос")
+            findViewById<TextView>(R.id.AnswerOneSelect).setText(answerOneSelect)
+
+            val answerTwoSelect = prefs.getString("answerTwo", "Ответ на вопрос")
+            findViewById<TextView>(R.id.AnswerTwoSelect).setText(answerTwoSelect)
         } else {
             startActivity(Intent(this@MainActivityTwo, MainActivity::class.java))
             overridePendingTransition(0, 0)
