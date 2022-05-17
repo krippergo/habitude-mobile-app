@@ -67,12 +67,14 @@ class CreateActivity : AppCompatActivity() {
             if (nameHabit.trim().length>0) {
                 if (answerOne.trim().length>0) {
                     if (answerTwo.trim().length>0) {
-                        val editorOne = prefs.edit()
-                        editorOne.putString("editTextNameHabit", nameHabit).apply()
-                        val editorTwo = prefs.edit()
-                        editorTwo.putString("answerOne", answerOne).apply()
-                        val editorThree = prefs.edit()
-                        editorThree.putString("answerTwo", answerTwo).apply()
+                        val editor = prefs.edit()
+                        editor.putString("editTextNameHabit", nameHabit).apply()
+                        editor.putString("answerOne", answerOne).apply()
+                        editor.putString("answerTwo", answerTwo).apply()
+                        editor.putInt("days", 21).apply()
+
+                        startActivity(Intent(this@CreateActivity, MainActivityTwo::class.java))
+                        overridePendingTransition(0, 0)
                     } else {
                         createsSimpleDialog()
                     }

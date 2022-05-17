@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         prefs = getSharedPreferences("habit", Context.MODE_PRIVATE)
-        if(prefs.contains("editTextNameHabit") && prefs.contains("answerOne") && prefs.contains("answerTwo")){
+        if(prefs.contains("editTextNameHabit") && prefs.contains("answerOne") && prefs.contains("answerTwo") && prefs.contains("days")){
             startActivity(Intent(this@MainActivity, MainActivityTwo::class.java))
             overridePendingTransition(0, 0)
         }

@@ -11,7 +11,8 @@
         android:theme="@style/Theme.HabitHub">
         <activity
             android:name=".MainActivityTwo"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CreateActivity"
             android:exported="false"
