@@ -957,6 +957,10 @@ class MainActivityTwo : AppCompatActivity() {
             startActivity(Intent(this@MainActivityTwo, MainActivity::class.java))
             overridePendingTransition(0, 0)
         }
+        builder.setOnCancelListener {
+            startActivity(Intent(this@MainActivityTwo, MainActivity::class.java))
+            overridePendingTransition(0, 0)
+        }
         builder.show()
     }
 }
