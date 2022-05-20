@@ -312,7 +312,7 @@
       android:layout_alignParentTop="true"
       android:layout_marginStart="9dp"
       android:layout_marginTop="7dp"
-      android:text="Поиграть в телефон 1 час."
+      android:text="Поиграть в компьютор 1 час."
       android:textColor="#FFFFFF"
       android:textSize="14dp"
       android:textStyle="bold"
