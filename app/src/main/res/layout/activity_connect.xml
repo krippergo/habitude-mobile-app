@@ -160,7 +160,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginBottom="2dp"
         android:gravity="center_horizontal|top"
-        android:text="Можно связаться с нами по почте habitude@gmail.com"
+        android:text="Можно связаться с нами по почте habitudeteam@gmail.com"
         android:textColor="#373737"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"

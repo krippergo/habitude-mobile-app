@@ -73,10 +73,10 @@ class ActivityShop : AppCompatActivity() {
             }
         }
         buttonOne.setOnClickListener {
-            if(prefs.getInt("money", 200) >= 900){
+            if(prefs.getInt("money", 200) >= 400){
                 val editor = prefs.edit()
 
-                var money = prefs.getInt("money", 200) - 900
+                var money = prefs.getInt("money", 200) - 400
                 editor.putInt("money", money).apply()
 
                 var moneyNow = prefs.getInt("money", 200)
@@ -90,10 +90,10 @@ class ActivityShop : AppCompatActivity() {
         }
 
         buttonTwo.setOnClickListener {
-            if(prefs.getInt("money", 200) >= 450){
+            if(prefs.getInt("money", 200) >= 250){
                 val editor = prefs.edit()
 
-                var money = prefs.getInt("money", 200) - 450
+                var money = prefs.getInt("money", 200) - 250
                 editor.putInt("money", money).apply()
 
                 var moneyNow = prefs.getInt("money", 200)
@@ -106,10 +106,10 @@ class ActivityShop : AppCompatActivity() {
             }
         }
         buttonThree.setOnClickListener {
-            if(prefs.getInt("money", 200) >= 1000){
+            if(prefs.getInt("money", 200) >= 500){
                 val editor = prefs.edit()
 
-                var money = prefs.getInt("money", 200) - 1000
+                var money = prefs.getInt("money", 200) - 500
                 editor.putInt("money", money).apply()
 
                 var moneyNow = prefs.getInt("money", 200)
